@@ -7,9 +7,7 @@ import { db } from '$lib/database'
 export const post: RequestHandler = async ({ request }) => {
   const form = await request.formData()
   const username = form.get('username')
-  console.log('username', username);
   const password = form.get('password')
-  console.log('password', password);
 
   if (
     typeof username !== 'string' ||
